@@ -1,2 +1,3 @@
 http://www.tutorialspoint.com/sqlite/sqlite_useful_functions.htm
 
+https://github.com/emoncms/emoncms
