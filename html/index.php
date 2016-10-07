@@ -20,7 +20,9 @@
     <!-- On/Off button's picture -->
 	<?php
 	
-	include 'test.php';
+	include 'getSumpData.php';
+	echo (SQLite3::version());
+	
 	
 	$val_array = array(0,0,0,0,0,0,0,0);
 
@@ -29,7 +31,7 @@
 		exec ("gpio read 25", $val_array[2], $return );
 		system("gpio mode 7 out");
 		exec ("gpio read 7", $val_array[1], $return );
-		
+			
 	//for loop to read the value
 	$i =0;
 	for ($i = 0; $i < 3; $i++) {
@@ -48,11 +50,10 @@
 	echo "<br>";
 	echo "<CENTER><font color='white': font size= '6'> ".tailCustom()."</font></CENTER>";
 
-include 'graph.php';
-
 	?>
 	 
 	<!-- javascript -->
 	<script src="script.js"></script>
+
     </body>
 </html>
